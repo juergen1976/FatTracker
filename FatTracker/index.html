@@ -26,7 +26,7 @@
     </style>
 </head>
 <body>
-    <div data-model="mobileListViewModel" data-role="view" id="mobile-listview-events" data-title="ListView MVVM">
+    <div data-model="fatViewModel" data-role="view" id="mobile-listview-events" data-title="ListView MVVM">
     <form data-bind="events: { submit: add }">
         <ul data-role="listview" data-style="inset" data-type="group">
             <li>
@@ -48,13 +48,6 @@
                 </ul>
             </li>
         </ul>
-
-        <p>
-            Kendo UI Mobile ListView supports the
-            <a href="http://docs.telerik.com/kendo-ui/getting-started/framework/mvvm/bindings/source">source</a>,
-            <a href="http://docs.telerik.com/kendo-ui/getting-started/framework/mvvm/bindings/events">events</a> and
-            <a href="http://docs.telerik.com/kendo-ui/getting-started/framework/mvvm/bindings/visible">visible</a> bindings.
-        </p>
     </form>
     <style scoped>
         .km-ios .km-listview .km-button,

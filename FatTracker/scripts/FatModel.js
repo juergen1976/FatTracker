@@ -1,4 +1,4 @@
-var mobileListViewModel = kendo.observable({
+var fatViewModel = kendo.observable({
     source: [ "foo", "bar" ],
     newItemValue: "",
     add: function(e) {
