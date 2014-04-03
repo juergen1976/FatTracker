@@ -26,27 +26,24 @@
     </style>
 </head>
 <body>
-    <div data-model="fatViewModel" data-role="view" id="mobile-listview-events" data-title="ListView MVVM">
-    <form data-bind="events: { submit: add }">
+    <div data-model="fatViewModel" data-role="view" id="mobile-listview-events" data-title="Fat Tracker">
+    <form data-bind="events: { submit: create }">
         <ul data-role="listview" data-style="inset" data-type="group">
             <li>
                 Add new item
                 <ul>
-                    <li><label>Add item: <input type="text" placeholder="item name&hellip;" data-bind="value: newItemValue" /></label></li>
+                    <li><label>Add fat: <input type="text" id="txtFat" placeholder="item name&hellip;" data-bind="value: fat" /></label></li>
                 </ul>
                 <button type="submit" class="km-widget km-button" style="display: block; margin: 1em auto; font-size: 1.1em;">Add</button>
             </li>
 
             <li>
                 Items:
-                <ul data-role="listview" data-bind="source: source, events { click: onClick }"></ul>
-            </li>
-            <li>
-                Events:
-                <ul data-role="listview">
-                    <li><div class="console"></div></li>
+                <ul data-role="listview" data-bind="source: fats">
+                    <li><span data-bind="text: Fat"></span></li>
                 </ul>
             </li>
+            
         </ul>
     </form>
     <style scoped>
