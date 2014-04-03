@@ -24,28 +24,6 @@
             background: #fff;
         }
     </style>
-</head>
-<body>
-    <div data-model="fatViewModel" data-role="view" id="mobile-listview-events" data-title="Fat Tracker">
-    <form data-bind="events: { submit: create }">
-        <ul data-role="listview" data-style="inset" data-type="group">
-            <li>
-                Add new item
-                <ul>
-                    <li><label>Add fat: <input type="text" id="txtFat" placeholder="item name&hellip;" data-bind="value: fat" /></label></li>
-                </ul>
-                <button type="submit" class="km-widget km-button" style="display: block; margin: 1em auto; font-size: 1.1em;">Add</button>
-            </li>
-
-            <li>
-                Items:
-                <ul data-role="listview" data-bind="source: fats">
-                    <li><span data-bind="text: Fat"></span></li>
-                </ul>
-            </li>
-            
-        </ul>
-    </form>
     <style scoped>
         .km-ios .km-listview .km-button,
         .km-ios7 .km-listview .km-button,
@@ -58,6 +36,32 @@
                 width: 100%;
             }
     </style>
-</div>
+</head>
+<body>
+    <div data-model="fatViewModel" data-role="view" id="mobile-listview-events" data-title="Fat Tracker">
+        <form data-bind="events: { submit: create }">
+            <ul data-role="listview" data-style="inset" data-type="group">
+                <li>
+                    Add new item
+                    <ul>
+                        <li><label>Add fat: <input type="text" id="txtFat" placeholder="item name&hellip;" data-bind="value: fat" /></label></li>
+                    </ul>
+                    <button type="submit" class="km-widget km-button" style="display: block; margin: 1em auto; font-size: 1.1em;">Add</button>
+                </li>
+
+                <li>
+                    All fats:
+                    <ul data-role="listview" data-bind="source: fats" data-template="fattemplate">
+                    </ul>
+                </li>
+                
+            </ul>
+        </form> 
+        <script type="text/x-kendo-tmpl" id="fattemplate">
+            <div>  
+                <h3>#:Fat#</h3>
+            </div>
+    	</script>
+	</div>
 </body>
 </html>
