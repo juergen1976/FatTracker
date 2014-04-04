@@ -1,9 +1,9 @@
 var fatViewModel = kendo.observable({
     
-    entryDate: null,
-    fat: null,
-    water: null,
-    muscle: null,
+    entryDate: 0,
+    fat: 0,
+    water: 0,
+    muscle: 0,
     
     fats: [],
  

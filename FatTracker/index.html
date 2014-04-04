@@ -55,9 +55,9 @@
                 <li>
                     Fat data for today
                     <ul>
-                        <li><label>Fat: <input type="text" id="txtFat" placeholder="fat in %" data-bind="value: fat" /></label></li>
-                        <li><label>Water: <input type="text" id="txtWater" placeholder="water in %" data-bind="value: water" /></label></li>
-                        <li><label>Muscle: <input type="text" id="txtMuscle" placeholder="muscle in %" data-bind="value: muscle" /></label></li>
+                        <li><label>Fat: <input type="number" min="0" max="100" id="txtFat" placeholder="fat in %" data-bind="value: fat" /></label></li>
+                        <li><label>Water: <input type="number" id="txtWater" placeholder="water in %" data-bind="value: water" /></label></li>
+                        <li><label>Muscle: <input type="number" id="txtMuscle" placeholder="muscle in %" data-bind="value: muscle" /></label></li>
                     </ul>
                     <button type="submit" class="km-widget km-button" style="display: block; margin: 1em auto; font-size: 1.1em;">Add</button>
                 </li>
@@ -72,7 +72,7 @@
         </form> 
         <script type="text/x-kendo-tmpl" id="fattemplate">
             <div>  
-                #:kendo.toString(EntryDate, 'yyyy-MM-dd') # Fat: #:Fat # Water: #:Water # Muscle: #:Muscle#
+                <span style="font-size:0.9em">#:kendo.toString(EntryDate, 'MMM-dd') # Fat: #:Fat # Water: #:Water # Muscle: #:Muscle#</span>
               <a href="\\#" data-role="button" class="delete" data-bind="events: { click: deleteFatEntry }">Delete</a>
               
             </div>
