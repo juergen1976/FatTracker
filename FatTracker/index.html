@@ -73,6 +73,8 @@
         <script type="text/x-kendo-tmpl" id="fattemplate">
             <div>  
                 #:kendo.toString(EntryDate, 'yyyy-MM-dd') # Fat: #:Fat # Water: #:Water # Muscle: #:Muscle#
+              <a href="\\#" data-role="button" class="delete" data-bind="events: { click: deleteFatEntry }">Delete</a>
+              
             </div>
     	</script>
 	</div>
@@ -107,5 +109,8 @@
 <!--       - Chart -->
 <!--       - Input fields integers -->
 <!--       - Style message box with animation -->
+<!--       - Delete entry -->
+<!--       - Delete all button -->
+<!--       - Only add once per day -->
 
 

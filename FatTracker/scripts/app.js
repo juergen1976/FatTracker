@@ -26,3 +26,7 @@
 function closeModalViewLogin() {
         $("#welcomeDialog").kendoMobileModalView("close");
     }
+
+function deleteFatEntry(e) {
+    alert(e.item);
+}
