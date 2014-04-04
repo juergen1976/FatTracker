@@ -1,3 +1,6 @@
+
+function drawChart(viewModel) {
+    
 var lineChartData = {
 			labels : ["January","February","March","April","May","June","July"],
 			datasets : [
@@ -17,6 +20,9 @@ var lineChartData = {
 				}
 			]
 
-		}
+		};
+
+    var myLine = new Chart(document.getElementById("fatCanvas").getContext("2d")).Line(lineChartData);
+}
 
 	

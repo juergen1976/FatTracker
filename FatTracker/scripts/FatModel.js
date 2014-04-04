@@ -18,6 +18,5 @@ var fatViewModel = kendo.observable({
 
  $("#txtFat").blur();
             e.preventDefault();
-    }
-    
+   }  
 });
