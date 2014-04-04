@@ -12,6 +12,9 @@
 
     <script src="scripts/app.js"></script>
     <script src="scripts/FatModel.js"></script>
+    <script src="scripts/Chart.min.js"></script>
+    <script src="scripts/FatChart.js"></script>
+    
     <style>
         html .km-wp-light .km-content,
         html .km-wp-light .km-button,
@@ -36,15 +39,25 @@
                 width: 100%;
             }
     </style>
+    
+    <meta name = "viewport" content = "initial-scale = 1, user-scalable = no">
 </head>
 <body>
-    <div data-model="fatViewModel" data-role="view" id="mobile-listview-events" data-title="Fat Tracker">
+    <div data-model="fatViewModel" data-role="view" id="fatInput" data-title="Fat Tracker">
+        <header data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title">Input</span>
+                <a data-align="right" data-role="button" href="#fatChart">Chart</a>
+            </div>
+        </header>   
         <form data-bind="events: { submit: create }">
             <ul data-role="listview" data-style="inset" data-type="group">
                 <li>
-                    Add new item
+                    Fat data for today
                     <ul>
-                        <li><label>Add fat: <input type="text" id="txtFat" placeholder="item name&hellip;" data-bind="value: fat" /></label></li>
+                        <li><label>Fat: <input type="text" id="txtFat" placeholder="fat in %" data-bind="value: fat" /></label></li>
+                        <li><label>Water: <input type="text" id="txtWater" placeholder="water in %" data-bind="value: water" /></label></li>
+                        <li><label>Muscle: <input type="text" id="txtMuscle" placeholder="muscle in %" data-bind="value: muscle" /></label></li>
                     </ul>
                     <button type="submit" class="km-widget km-button" style="display: block; margin: 1em auto; font-size: 1.1em;">Add</button>
                 </li>
@@ -59,9 +72,40 @@
         </form> 
         <script type="text/x-kendo-tmpl" id="fattemplate">
             <div>  
-                <h3>#:Fat#</h3>
+                #:kendo.toString(EntryDate, 'yyyy-MM-dd') # Fat: #:Fat # Water: #:Water # Muscle: #:Muscle#
             </div>
     	</script>
 	</div>
+    
+    <div data-role="view" id="fatChart" data-title="Chart">
+         <header data-role="header">
+            <div data-role="navbar">
+                <a class="nav-button" href="#/" data-align="left" data-role="backbutton">Zurück</a>
+                <span data-role="view-title">Chart</span>
+            </div>
+        </header>
+	
+        <!-- Plot area is here -->
+        <canvas id="fatCanvas" height="250" width="300"></canvas>
+        <script>
+            var myLine = new Chart(document.getElementById("fatCanvas").getContext("2d")).Line(lineChartData);
+        </script>
+        
+    </div>
+    
+    <div data-role="modalview" id="welcomeDialog" style="width: 200px; height: 200px;">
+        <p>Welcome to FatTracker</p>
+        
+         <a data-click="closeModalViewLogin" data-role="button" data-align="right">Schliessen</a>
+    </div>
 </body>
 </html>
+
+<!-- TODO -->
+<!--       - Storage -->
+<!--   	- Add button -->
+<!--       - Chart -->
+<!--       - Input fields integers -->
+<!--       - Style message box with animation -->
+
+

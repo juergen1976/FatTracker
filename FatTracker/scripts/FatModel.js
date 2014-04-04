@@ -11,7 +11,7 @@ var fatViewModel = kendo.observable({
     create: function(e) {
 
         // add the items to the array of expenses 
-        this.get("fats").push({EntryDate: this.get("entryDate"), 
+        this.get("fats").push({EntryDate: new Date(), 
                                    Fat: this.get("fat"), 
                                    Water: this.get("water"),
              					  Muscle: this.get("muscle")});

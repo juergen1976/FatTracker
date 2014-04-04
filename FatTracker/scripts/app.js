@@ -4,6 +4,7 @@
 
     document.addEventListener('deviceready', function () {
         navigator.splashscreen.hide();
+        $("#welcomeDialog").data("kendoMobileModalView").open();
     }, false);
 
     app.application = new kendo.mobile.Application(document.body, { layout: "tabstrip-layout"});
@@ -21,3 +22,7 @@
         app.application.skin(mobileSkin);
     };
 })(window);
+
+function closeModalViewLogin() {
+        $("#welcomeDialog").kendoMobileModalView("close");
+    }
