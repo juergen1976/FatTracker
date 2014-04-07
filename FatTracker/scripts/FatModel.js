@@ -16,7 +16,11 @@ var fatViewModel = kendo.observable({
                                    Water: this.get("water"),
              					  Muscle: this.get("muscle")});
 
- $("#txtFat").blur();
-            e.preventDefault();
-   }  
+ 		$("#txtFat").blur();
+         e.preventDefault();
+   },
+    
+    remove: function(fatEntry) {
+        
+    }
 });

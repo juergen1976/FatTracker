@@ -28,5 +28,9 @@ function closeModalViewLogin() {
     }
 
 function deleteFatEntry(e) {
-    alert(e.item);
+    debugger;
+    var listView = $("#mainListView").kendoMobileListView();
+    var item = $(e.target).closest("li");
+    var data = listView.dataSource.getByUid(item.data("uid"));
+    alert(data.Fat);
 }
