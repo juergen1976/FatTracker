@@ -1,3 +1,6 @@
+var fatModel = kendo.data.Model
+
+
 var fatViewModel = kendo.observable({
     
     entryDate: 0,
