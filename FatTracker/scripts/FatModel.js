@@ -1,4 +1,6 @@
-var fatModel = kendo.data.Model
+var fatModel = kendo.data.Model.define({
+    
+});
 
 
 var fatViewModel = kendo.observable({
