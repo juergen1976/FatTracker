@@ -23,7 +23,9 @@ var fatViewModel = kendo.observable({
     water: 0,
     muscle: 0,
     
-    fats: [],
+    fats: [new FatModel({EntryDate: new Date(2014,04, 10), Fat: 22, Water: 67, Muscle: 22}),
+    	   new FatModel({EntryDate: new Date(2014,04, 11), Fat: 23, Water: 66, Muscle: 20})
+    ],
  
     // add a new fat entry
     create: function(e) {
