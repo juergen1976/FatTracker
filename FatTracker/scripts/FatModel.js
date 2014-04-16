@@ -27,7 +27,6 @@ var fatViewModel = kendo.observable({
  
     // add a new fat entry
     create: function(e) {
-
         // add the items to the array of expenses 
         this.get("fats").push(new FatModel({EntryDate: new Date(), 
                                    Fat: this.get("fat"), 
@@ -39,8 +38,6 @@ var fatViewModel = kendo.observable({
    },
     
     remove: function(e) {
-      
-        alert(e.data.Fat);
         var that = this;
         $.each(that.fats, function(idx, fatEntry) {
             if (e.data.uid === fatEntry.uid) {
