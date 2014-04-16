@@ -73,7 +73,7 @@
         <script type="text/x-kendo-tmpl" id="fattemplate">
             <div>  
                 <span style="font-size:0.9em">#:kendo.toString(EntryDate, 'MMM-dd') # Fat: #:Fat # Water: #:Water # Muscle: #:Muscle#</span>
-              <a href="\\#" data-role="button" class="k-delete-button" data-click="deleteFatEntry">Delete</a>
+              <a href="\\#" data-role="button" class="k-delete-button" data-bind="events { click: remove }">Delete</a>
               
             </div>
     	</script>

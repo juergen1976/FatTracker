@@ -24,13 +24,5 @@
 })(window);
 
 function closeModalViewLogin() {
-        $("#welcomeDialog").kendoMobileModalView("close");
-    }
-
-function deleteFatEntry(e) {
-    debugger;
-    var listView = $("#mainListView").kendoMobileListView();
-    var item = $(e.target).closest("li");
-    var data = listView.dataSource.getByUid(item.data("uid"));
-    alert(data.Fat);
+    $("#welcomeDialog").kendoMobileModalView("close");
 }
