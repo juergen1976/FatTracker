@@ -6,7 +6,9 @@ function drawChart(e) {
 var allFats =_.pluck(fatViewModel.fats, 'Fat'), 
     allWater = _.pluck(fatViewModel.fats, 'Water'), 
     allMuscle = _.pluck(fatViewModel.fats, 'Muscle'), 
-    allDates = _.pluck(fatViewModel.fats, 'EntryDate');
+    allDates = _.map(fatViewModel.fats, function(fatModel) {
+        return kendo.toString(fatModel.EntryDate, "dd-MM");
+    });
     
     debugger;
     alert(allWater.length);
