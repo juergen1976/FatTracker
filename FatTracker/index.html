@@ -79,7 +79,7 @@
     	</script>
 	</div>
     
-    <div data-role="view" id="fatChart" data-title="Chart">
+    <div data-role="view" id="fatChart" data-title="Chart" data-init="drawChart">
          <header data-role="header">
             <div data-role="navbar">
                 <a class="nav-button" href="#/" data-align="left" data-role="backbutton">Zurück</a>
@@ -89,10 +89,6 @@
 	
         <!-- Plot area is here -->
         <canvas id="fatCanvas" height="300" width="300"></canvas>
-        <script>
-            drawChart(fatViewModel);
-        </script>
-        
     </div>
     
     <div data-role="modalview" id="welcomeDialog" style="width:50%; height: 50%;">

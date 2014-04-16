@@ -1,5 +1,7 @@
 
-function drawChart(viewModel) {
+function drawChart(e) {
+    
+    alert("Dataset count: " + fatViewModel.fats.length);
     
 var lineChartData = {
 			labels : ["January","February","March","April","May","June","July"],
