@@ -47,5 +47,9 @@ var fatViewModel = kendo.observable({
                 return true;
             }
         });
+    },
+    
+    clearAll: function(e) {
+        this.get("fats").length = 0;
     }
 });
