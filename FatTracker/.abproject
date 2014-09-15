@@ -58,5 +58,7 @@
     "ID_RESOLUTION_HD720P"
   ],
   "BundleVersion": "1.0",
-  "Framework": "Cordova"
+  "Framework": "Cordova",
+  "Author": "",
+  "Description": "FatTracker"
 }
