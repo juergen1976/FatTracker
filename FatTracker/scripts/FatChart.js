@@ -8,7 +8,6 @@ var allFats =_.pluck(fatViewModel.fats, 'Fat'),
         return kendo.toString(fatModel.EntryDate, "dd-MM");
     });
     
-    debugger;
     alert(allWater.length);
     
 var lineChartData = {
