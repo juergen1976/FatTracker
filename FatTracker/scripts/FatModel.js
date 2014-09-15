@@ -48,6 +48,7 @@ var fatViewModel = kendo.observable({
     },
     
     clearAll: function(e) {
+        // Delete all
         this.get("fats").length = 0;
     }
 });
